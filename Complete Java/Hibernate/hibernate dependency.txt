@@ -1,0 +1,19 @@
+1 mvn repositort --> msql connector
+ select 5.1.47 version
+ copy that dependency url and open pom.xml past in inside dependencies
+
+2. mvn repositort --> search hibernate
+ Hibernate Core Relocation
+ hibernate-core 5.4.2 
+
+3. mvn repositort --> search hibernate
+ Hibernate EntityManager Relocation » 5.4.2.Final
+ hibernate-entitymanager 5.4.2
+
+4.maven java 1.8 --> copy propertiy and paste inside the propertiy
+
+
+maven Repository -----> lombok
+project lombk
+version 1.18.8
+download and double click iton it

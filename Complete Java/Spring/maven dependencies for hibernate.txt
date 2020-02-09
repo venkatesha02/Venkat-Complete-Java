@@ -1,0 +1,111 @@
+***************************************************************
+for hibernate
+
+mvn  mysql connector-5.1.47
+
+mvn  hibernate-entitymanager - 5.4.2.Final inside dependency
+
+mvn mysql-connector-java  hibernate-core - 5.4.2.Final inside dependency
+
+maven java 1.8 - <maven.compiler.source>1.8</maven.compiler.source> inside properties
+   		 <maven.compiler.target>1.8</maven.compiler.target>
+
+
+ persistence file 2.1 search in google
+ link - https://examples.javacodegeeks.com/enterprise-java/jpa/java-persistence-xml-example/
+1.2 copy
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+    xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="TestPersistence" transaction-type="RESOURCE_LOCAL">
+        <class><!-- Entity Manager Class Name --></class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="Database Driver Name" />
+            <property name="javax.persistence.jdbc.url" value="Database Url" />
+            <property name="javax.persistence.jdbc.user" value="Database Username" />
+            <property name="javax.persistence.jdbc.password" value="Database Password" />
+        </properties>
+    </persistence-unit>
+</persistence>
+
+
+search mvnrepository and type lombok-Project Lombok » 1.18.8 download
+set eclipse path and add depedency in maven project
+
+
+*******************************************
+for mvc
+
+
+fallow above procedure 
+1.gito mvnrepocitory - serach  spring mvc - Spring Web MVC » 5.0.8.RELEASE
+
+copy - <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+<dependency>
+    <groupId>org.springframework</groupId> 
+    <artifactId>spring-webmvc</artifactId>
+    <version>5.0.8.RELEASE</version>
+</dependency>
+
+
+2.congiure the root servlet and search ctrl+shift T press and serach DispatcherServlet
+  copy the qualified class name paste in servlet class name tag
+
+3.create xml file in WEB-INF with the name root-servlet.xml
+  and paste bean tag in the xml file 
+ copy - <beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+</beans>
+
+
+4.add url in the xml file - only mvc url below 2 url only
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/mvc 
+    http://www.springframework.org/schema/mvc/spring-mvc.xsd
+    ">
+</beans> 
+
+5. create bean tag and give id as below mentioned and earch ctrl+shift T press and serach InternalResourceViewResolver
+copy qualified name - org.springframework.web.servlet.view.InternalResourceViewResolver
+ <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"></bean>
+
+6. inside bean create property like this
+  <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="prefix" value="/WEB-INF/view/"></property>
+    <property name="suffix" value=".jsp"></property>
+    </bean>
+
+7.create package .controller and create a class spring controller and write like code
+	@Controller
+public class SpringController {
+	@RequestMapping("/hello")
+	public String hellow(ModelMap map) {
+		map.addAttribute("msg", "Hellow ... World...");
+		return "index";
+		
+	}
+
+}
+8.and then create component in root-servelt.xml like this
+  <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="prefix" value="/WEB-INF/view/"></property>
+    <property name="suffix" value="/.jsp"></property>
+    </bean>
+    <context:component-scan base-package="com.tyss.springmvc"></context:component-scan>
+    
+9.open ur server right click on it and select option add and remove option and configure ur project 
+
+   

@@ -1,0 +1,6 @@
+Go to google ----> https://start.spring.io/
+
+choose current version spring 
+search web 
+and select spring web 
+then genarate

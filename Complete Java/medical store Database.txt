@@ -1,0 +1,39 @@
+create database medicalStore_Db;
+
+use medicalStore_Db;
+
+create table medicine_tbl(
+mId 	int NOT NULL AUTO_INCREMENT,
+tabName varchar(250) NOT NULL,
+price 	int not null,
+PRIMARY KEY (mId)
+);
+
+
+create table user_tbl(
+uId      int(10)NOT NULL AUTO_INCREMENT,
+uName    varchar(200) NOT NULL,
+age      int NOT NULL,
+ph_num   bigint NOT NULL,
+password varchar(250) NOT NULL,
+PRIMARY KEY (uId)
+);
+
+
+create table cart_tbl(
+uId      int(10)NOT NULL,
+tabName  varchar(250) NOT NULL,
+price 	int not null);
+
+);
+
+insert into medicine_tbl values(?,?,?)
+
+delete from medicine_tbl where mId=?
+
+update medicine_tbl set tabName= ?,price= ? where mId= ?
+
+select * from medicine_tbl;
+
+
+drop table medicine_tbl;

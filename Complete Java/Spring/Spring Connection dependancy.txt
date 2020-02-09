@@ -1,0 +1,34 @@
+add in pom.xml paste in that
+<properties>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<maven.compiler.source>1.8</maven.compiler.source>
+	<maven.compiler.target>1.8</maven.compiler.target>
+</properties>
+
+
+1. go to mvnrepository
+search ---> Spring Context 
+version 5.0.8 
+and add the dependancy inside the dependencies
+
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>5.0.8.RELEASE</version>
+</dependency>
+
+
+2. create one beans.xml file under the src/main/java
+
+3. go to google 
+search ---> spring core 5 xml file
+then go to this web address ---> howtodoinjava.com
+in beans.xml
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+</beans>

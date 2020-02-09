@@ -1,0 +1,124 @@
+create database Employee_Management_DB;
+
+use Employee_Management_DB;
+-----------------------------------------------------------------
+create table Emp_Primary_info(
+emp_id int primary key,
+emp_name varchar(250) not null,
+salary double,
+department_id int ,
+joining_date date,
+phone_number long,
+official_mail varchar(250),
+designation varchar(250),
+dob date,
+manager_id int,
+experience double
+);
+
+insert into Emp_Primary_info values(1,"Venki",60000,20,"2018-06-06",9856247856,"venki@gmail.com","team leader","2018-06-08",20,0.6);
+insert into Emp_Primary_info values(2,"Raju",50000,30,"2016-07-06",8251475858,"Raju@gmail.com","SD","2018-06-08",20,0.6);
+insert into Emp_Primary_info values(3,"Vivek",40000,10,"2018-08-06",9856247856,"Vivek@gmail.com","SE","2018-06-08",20,0.6);
+insert into Emp_Primary_info values(4,"Gaja",20000,40,"2017-06-06",8521478963,"Gaja@gmail.com","TE","2018-06-08",20,0.6);
+insert into Emp_Primary_info values(5,"Vikki",30000,20,"2019-09-06",9632548525,"Vikki@gmail.com","HR","2018-06-08",20,0.6);
+---------------------------------------------------------------------
+create table Emp_Secondary_info(
+emp_id int primary key,
+gender varchar(250),
+personal_email varchar(250),
+job_location varchar(250),
+is_married boolean,
+nationality varchar(250),
+guardian_number long,
+guardian_name varchar(250),
+govt_id varchar(250),
+blood_group varchar(250),
+emargancy_no long,
+is_phycally_challenged boolean
+);
+
+
+insert into Emp_Secondary_info values(1,"Male","venki@gmail.com","banglore",true,"india",8521478569,"Raju","BGJ8547","A +ve",8585858585,false);
+insert into Emp_Secondary_info values(2,"Male","Rajesh@gmail.com","Manglore",true,"india",9856256898,"Ramu","BGJ8547","B +ve",9568568585,false);
+
+------------------------------------------------------------------------
+
+create table Emp_Project_info(
+emp_id int not null unique,
+project_id int primary key 
+);
+
+
+insert into Emp_Project_info values(1,01);
+insert into Emp_Project_info values(2,02);
+
+------------------------------------------------------------------------
+
+create table Emp_Bank_info(
+emp_id int primary key,
+account_no long,
+bank_name varchar(250),
+branch_name varchar(250),
+ifsc_code varchar(250) 
+);
+
+insert into Emp_Bank_info values(1,2589658965865,"SBI","BRP","SBIN0025865");
+insert into Emp_Bank_info values(2,2589658965865,"Canara","IUP","CNR025865");
+-------------------------------------------------------------------------
+
+create table Department_info(
+dept_id int primary key,
+dept_name varchar(250),
+dept_manager_id int
+);
+
+insert into Department_info values(100,"account",1);
+insert into Department_info values(200,"account",5);
+
+--------------------------------------------------------------------------
+
+create table Project_info(
+project_id int primary key,
+project_name varchar(250),
+technology varchar(250),
+location varchar(250),
+start_date date,
+end_date date
+);
+
+insert into Project_info values(101,"Shoppping Application","Java","banglore","2018-06-12","2019-06-12");
+insert into Project_info values(102,"Booking Application","J2EE","banglore","2017-06-12","2018-06-12");
+
+----------------------------------------------------------------------------
+
+create table Emp_Address_info(
+emp_id int primary key,
+addrs_type varchar(250) not null unique,
+house_no int,
+addrs1 varchar(250),
+addrs2 varchar(250),
+landmark varchar(250),
+city varchar(250),
+pincode int
+);
+
+insert into Emp_Address_info values(10,"home",42,"banglore","banglore","kuvempu statue","Smg",577451); 
+insert into Emp_Address_info values(15,"office",482,"banglore","banglore","kuvempu statue","Smg",577451); 
+
+----------------------------------------------------------------------------
+
+create table Emp_Education_info(
+emp_id int primary key,
+education_type varchar(250) not null unique,
+collage_name varchar(250),
+yop date,
+percentage double,
+university varchar(250),
+stream varchar(250)
+);
+
+insert into Emp_Education_info values(1,"full time","KVV","2019-06-25",56.23,"VTU","CS");
+insert into Emp_Education_info values(2,"full-time","KLJ","2018-06-27",85,"PTU","Mech");
+
+---------------------------------------------------------------------------
+

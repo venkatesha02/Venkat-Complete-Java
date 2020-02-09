@@ -1,0 +1,43 @@
+1) go to mvnrepository.com --------> search  JUnit Jupiter API » 5.5.2
+
+<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.5.2</version>
+			<scope>test</scope>
+		</dependency>
+
+2) go to mvnrepository.com --------> search JUnit Jupiter Engine » 5.5.2
+
+<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.5.2</version>
+			<scope>test</scope>
+		</dependency>
+
+1 and 2 are same version
+
+3) go to mvnrepository.com --------> search  junit-platform-launcher» 1.5.2
+
+<!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher -->
+<dependency>
+    <groupId>org.junit.platform</groupId>
+    <artifactId>junit-platform-launcher</artifactId>
+    <version>1.5.2</version>
+    <scope>test</scope>
+</dependency>
+
+4) go to mvnrepository.com --------> search  junit-jupiter-params 5.5.2
+
+<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params -->
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-params</artifactId>
+    <version>5.5.2</version>
+    <scope>test</scope>
+</dependency>
+
+copy dependency and paste it in pom.xml inside the dependecies
